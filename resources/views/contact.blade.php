@@ -1,19 +1,23 @@
 @extends('layout')
 
-
 @section('title')
 
-    EEDMIS
+	Contact Us
 
 @endsection
+
 
 @section('content')
 <center>
-    <h1>EEDMO</h1>
+	<h1>Contact Us</h1>
 </center>
-    
+
+
+
 @endsection
 
+
+
 @section('options')
-    <li style="float:right"><a class='active' href="/login">Login</a></li>
+	<li style="float:right"><a class='active' href="/login">Login</a></li>
 @endsection

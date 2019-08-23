@@ -2,16 +2,22 @@
 <html>
 <head>
 	<title>@yield('title')</title>
+	<link rel="stylesheet/less" type="text/css" href="styles.less" />
+	<script src="less.js" type="text/javascript"></script>
 	<style>
-		body{
-			margin: 0 auto;
+		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+		body, html {
+		  font-family: 'Source Sans Pro', sans-serif;
+		  background-color: #1d243d;
+		  padding: 0;
+		  margin: 0;
 		}
 		ul {
 		  list-style-type: none;
 		  margin: 0;
 		  padding: 0;
 		  overflow: hidden;
-		  background-color: #333;
+		  background-color: #1d243d;
 		}
 
 		li {
@@ -38,14 +44,17 @@
 <body>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a class="active" href="#about">@yield('options')</a></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/contact">Contact</a></li>
+  @yield('options')
 </ul>
 
 
 @yield('content')
 
 </body>
+<style>
+	@yield('style')
+</style>
 </html>
