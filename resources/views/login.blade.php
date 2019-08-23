@@ -14,7 +14,7 @@
 <div class="animated bounceInDown">
   <div class="container">
     <span class="error animated tada" id="msg"></span>
-    <form name="form1" class="box" onsubmit="return checkStuff()">
+    <form name="form1" class="box" onsubmit="{{ url('/main/checklogin') }}">
       <h4>EEDMO<span>Management System</span></h4>
       <h5>Login to your account.</h5>
         <input type="text" name="email" placeholder="Email" autocomplete="off">
@@ -39,16 +39,6 @@
 
 
 @section('style')
-
-
-
-
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 
 .container{
   margin: 0;
@@ -233,7 +223,7 @@ label span {
 @section('script')
 
 <script id="rendered-js">
-  var pwd = document.getElementById('pwd');
+var pwd = document.getElementById('pwd');
 var eye = document.getElementById('eye');
 
 eye.addEventListener('click',togglePass);
