@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>@yield('title')</title>
-	<script src="resources/js/less.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 		body, html {
@@ -40,7 +42,7 @@
 		}
 	</style>
 </head>
-<body>
+<body id="particles-js">
 
 <ul>
   <li><a href="/">Home</a></li>
@@ -56,4 +58,6 @@
 <style>
 	@yield('style')
 </style>
+
+@yield('script')
 </html>
