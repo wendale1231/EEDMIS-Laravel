@@ -10,7 +10,7 @@
 Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 
 
-***How to Connect to Database anf Migrate***<br><br>
+***How to Connect to Database and Migrate***<br>
 
 -Run Xampp and start Apache and Mysql service<br>
 -Create database and name it "eedmis_laravel"(without quotes)<br>
@@ -18,6 +18,6 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 -Enter "php artisan migrate" and hit ENTER<br>
 -Done!<br><br>
 
-***Note***<br><br>
+***Note***<br>
 -Please Sync With Sublime Merge or Any Other Git App..<br>
 -Lets make this clean and responsive<br>
