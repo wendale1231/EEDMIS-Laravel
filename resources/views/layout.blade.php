@@ -2,8 +2,7 @@
 <html>
 <head>
 	<title>@yield('title')</title>
-	<link rel="stylesheet/less" type="text/css" href="styles.less" />
-	<script src="less.js" type="text/javascript"></script>
+	<script src="resources/js/less.js" type="text/javascript"></script>
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 		body, html {
