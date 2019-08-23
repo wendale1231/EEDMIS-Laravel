@@ -18,7 +18,8 @@
 		  margin: 0;
 		  padding: 0;
 		  overflow: hidden;
-		  background-color: #1d243d;
+		  background-color: rgb( 33, 41, 66 );
+		  box-shadow: 1px 1px 108.8px 19.2px rgb(25,31,53);
 		}
 
 		li {
@@ -34,11 +35,11 @@
 		}
 
 		li a:hover:not(.active) {
-		  background-color: #111;
+		  background-color: #5d33e6;
 		}
 
 		.active {
-		  background-color: #4CAF50;
+		  background-color: #5d33e6;
 		}
 	</style>
 </head>
