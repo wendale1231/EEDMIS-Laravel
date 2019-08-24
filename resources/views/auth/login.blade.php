@@ -197,20 +197,7 @@ label input[type=checkbox]:checked + span:before {/* <-- style its checked state
   display: none;
 }
 
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    top: 605px;
-    width: 100%;
-    color: #78797d;
-    font-size: 14px;
-    text-align: center;
-}
 
-.footer .fa {
-  color: #7f5feb;;
-}
 
 @endsection
 

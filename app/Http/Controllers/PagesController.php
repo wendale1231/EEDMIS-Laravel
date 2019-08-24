@@ -25,7 +25,7 @@ class PagesController extends Controller
 		);
 
 		if(Auth::attempt($user_data)){
-			return view('../home');
+			return view('home');
 		}
 		else{
 			return back()->with('error', 'Wrong Login Details');
