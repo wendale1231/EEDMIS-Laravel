@@ -27,10 +27,10 @@ class HomeController extends Controller
     }
 
     public function ibjt(){
-        return view('/IBJT');
+        return view('department.IBJT');
     }
 
     public function admin(){
-        return view('/admin');
+        return view('department.admin');
     }
 }

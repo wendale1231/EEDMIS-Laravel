@@ -11,6 +11,8 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', 'HomeController@home');
 
 Route::get('/IBJT', 'HomeController@ibjt');
@@ -34,5 +36,5 @@ Route::get('/admin', 'HomeController@admin');
 
 
 
-Auth::routes();
+
 
