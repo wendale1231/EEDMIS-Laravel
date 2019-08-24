@@ -6,7 +6,7 @@
 <div class="animated bounceInDown">
   <div class="container">
     <span class="error animated tada" id="msg"></span>
-    <form name="form1" class="box" method="post" action="{{ route('login') }}">
+    <form name="form1" class="box" method="post" action="">
         @csrf
       <h4>EEDMO<span>Management System</span></h4>
       <h5>Login to your account.</h5>

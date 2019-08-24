@@ -16,7 +16,7 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
+    /**echo "<script>console.log('" . $request->dept . "')</script>";
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -26,9 +26,11 @@ class HomeController extends Controller
         return view('/home');
     }
 
-    public function get_data(){
-        
+    public function ibjt(){
+        return view('/IBJT');
     }
 
-
+    public function admin(){
+        return view('/admin');
+    }
 }

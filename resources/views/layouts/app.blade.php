@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,9 +38,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a style="color: white" href="{{ url('/home') }}">
-                    EEDMIS - @if(isset(Auth::user()->dept)){{ Auth::user()->dept  }} @else Management System @endif
+                @if(isset(Auth::user()->dept))
+                <a style="color: white" href="{{ url(Auth::user()->dept) }}">
+                    EEDMO- {{ Auth::user()->dept  }} @else Management System 
                 </a>
+                @endif
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

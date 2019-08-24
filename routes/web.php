@@ -13,6 +13,9 @@
 
 Route::get('/', 'HomeController@home');
 
+Route::get('/IBJT', 'HomeController@ibjt');
+
+Route::get('/admin', 'HomeController@admin');
 
 // Murag Useless ni siya so akong gi remove haha
 
@@ -33,4 +36,3 @@ Route::get('/', 'HomeController@home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@home')->name('home');

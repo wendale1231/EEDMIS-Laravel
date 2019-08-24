@@ -43,7 +43,7 @@
 	</style>
 </head>
 <body id="particles-js">
-
+@csrf
 @yield('anv_bar')
 
 
