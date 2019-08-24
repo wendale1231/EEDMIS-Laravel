@@ -201,7 +201,7 @@ label input[type=checkbox]:checked + span:before {/* <-- style its checked state
 
 @endsection
 
-
+<!--Old UI-->
 <!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

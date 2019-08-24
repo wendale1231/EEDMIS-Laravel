@@ -63,3 +63,10 @@
     </div>
 </div>
 @endsection
+
+
+@section('link')
+
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+@endsection

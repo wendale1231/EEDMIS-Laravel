@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@home');
 
+
+// Murag Useless ni siya so akong gi remove haha
+
+
 // Route::get('/contact', function(){
 // 	return view('contact');
 // });
@@ -24,13 +28,6 @@ Route::get('/', 'HomeController@home');
 // Route::get('/login', function(){
 // 	return view('login');
 // });
-Auth::routes();
-
-Route::get('/home', 'HomeController@home')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@home')->name('home');
 
 Auth::routes();
 

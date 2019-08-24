@@ -31,4 +31,23 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 
 ***Note***<br>
 -Please Sync With Sublime Merge or Any Other Git App..<br>
--Lets make this clean and responsive<br>
+-Lets make this clean and responsive<br><br>
+
+***Minor Changelogs***<br>
+------08.24.19------<br>
+-Added Changelogs<br>
+-Fixed! Route [lo] not defined.<br><br>
+
+
+***Major Changelogs***<br>
+------08.24.19------<br>
+-Login System Added<br><br>
+
+
+
+
+***Pending Changes***<br><br>
+------08.24.19------<br>
+-Forget Password doesn't work<br>
+-Changing User Interface Color(lighter)<br>
+-Main Function of the system(dli ko ka buhat ug backend basta wla pay frontend)<br>
