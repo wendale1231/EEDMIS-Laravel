@@ -29,6 +29,8 @@ Route::get('/', 'HomeController@home');
 // 	return view('login');
 // });
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@home')->name('home');

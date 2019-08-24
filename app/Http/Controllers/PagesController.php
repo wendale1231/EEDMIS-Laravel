@@ -16,16 +16,20 @@ class PagesController extends Controller
     public function check_login(Request $request){
 		$this->validate($request, [
 			'email'   => 'required|email',
+			'username' = > 'required|username',
+			'dept' => 'required|dept',
 			'password'  => 'required|alphaNum|min:3'
 		]);
 
 		$user_data = array(
 			'email'  => $request->get('email'),
+			'username' => $request->get('username'),
+			'dept' => $request->get('dept'),
 			'password' => $request->get('password')
 		);
 
 		if(Auth::attempt($user_data)){
-			return view('home');
+			return view('home')->with($user_data);
 		}
 		else{
 			return back()->with('error', 'Wrong Login Details');

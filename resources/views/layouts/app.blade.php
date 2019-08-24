@@ -37,9 +37,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <span style="color: white" href="{{ url('/home') }}">
-                    EEDMIS - {"station_name"}
-                </span>
+                <a style="color: white" href="{{ url('/home') }}">
+                    EEDMIS - @if(isset(Auth::user()->dept)){{ Auth::user()->dept  }} @else Management System @endif
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
