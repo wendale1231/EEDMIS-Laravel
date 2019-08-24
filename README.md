@@ -34,6 +34,10 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 -Lets make this clean and responsive<br><br>
 
 ***Minor Changelogs***<br>
+------08.25.19------<br>
+-Splitting Departments<br>
+-Bug Fixes<br><br>
+
 ------08.24.19------<br>
 -Added Changelogs<br>
 -Fixed! Route [lo] not defined.<br><br>
