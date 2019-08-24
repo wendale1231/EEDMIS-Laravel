@@ -6,7 +6,7 @@
 
 
 
-***How to Install Laravel Framework***
+***How to Install Laravel Framework***<br>
 Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 
 
