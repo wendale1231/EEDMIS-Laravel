@@ -30,9 +30,7 @@
         <input type="submit" value="Sign in" class="btn1">
       </form>
   </div> 
-       <div class="footer">
-      <span>EEDMIS <a href="https://facebook.com/babblefour">By HalfByte</a></span>
-    </div>
+
 </div>
 
 @section('style')

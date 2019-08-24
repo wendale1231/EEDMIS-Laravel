@@ -1,12 +1,4 @@
 
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,9 +23,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <span class="navbar-brand" href="{{ url('/home') }}">
                     EEDMIS - {"station_name"}
-                </a>
+                </span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -69,7 +61,7 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('lo') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
@@ -89,6 +81,9 @@
   <li><a href="/contact">Contact</a></li>
   @yield('options')
 </ul> -->
+    <div class="footer">
+      <span>EEDMIS <a href="https://facebook.com/babblefour">By HalfByte</a></span>
+    </div>
 
 </body>
 @yield('script')
