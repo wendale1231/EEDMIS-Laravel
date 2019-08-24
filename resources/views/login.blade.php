@@ -30,7 +30,7 @@
       </form>
   </div> 
        <div class="footer">
-      <span>EEDMIS<i class="fa fa-heart pulse"></i> <a href="https://www.google.de/maps/place/Augsburger+Puppenkiste/@48.360357,10.903245,17z/data=!3m1!4b1!4m2!3m1!1s0x479e98006610a511:0x73ac6b9f80c4048f"><a href="https://facebook.com/babblefour">By HalfByte</a></span>
+      <span>EEDMIS <a href="https://facebook.com/babblefour">By HalfByte</a></span>
     </div>
 </div>
 
@@ -162,7 +162,7 @@ label span {
     left: 24%;
 }
 
-[type=checkbox]:checked + span:before {/* <-- style its checked state */
+label input[type=checkbox]:checked + span:before {/* <-- style its checked state */
     font-family: FontAwesome;
     font-size: 16px;
     content: "\f00c";
@@ -235,38 +235,38 @@ function togglePass(){
    (pwd.type == 'password') ? pwd.type = 'text' : pwd.type = 'password';
 }
 
-// Form Validation
+// 
 
-function checkStuff() {
-  var email = document.form1.email;
-  var password = document.form1.password;
-  var msg = document.getElementById('msg');
+// function checkStuff() {
+//   var email = document.form1.email;
+//   var password = document.form1.password;
+//   var msg = document.getElementById('msg');
   
-  if (email.value == "") {
-    msg.style.display = 'block';
-    msg.innerHTML = "Please enter your email";
-    email.focus();
-    return false;
-  } else {
-    msg.innerHTML = "";
-  }
+//   if (email.value == "") {
+//     msg.style.display = 'block';
+//     msg.innerHTML = "Please enter your email";
+//     email.focus();
+//     return false;
+//   } else {
+//     msg.innerHTML = "";
+//   }
   
-   if (password.value == "") {
-    msg.innerHTML = "Please enter your password";
-    password.focus();
-    return false;
-  } else {
-    msg.innerHTML = "";
-  }
-   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (!re.test(email.value)) {
-    msg.innerHTML = "Please enter a valid email";
-    email.focus();
-    return false;
-  } else {
-    msg.innerHTML = "";
-  }
-}
+//    if (password.value == "") {
+//     msg.innerHTML = "Please enter your password";
+//     password.focus();
+//     return false;
+//   } else {
+//     msg.innerHTML = "";
+//   }
+//    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   if (!re.test(email.value)) {
+//     msg.innerHTML = "Please enter a valid email";
+//     email.focus();
+//     return false;
+//   } else {
+//     msg.innerHTML = "";
+//   }
+// }
 
 </script>
 

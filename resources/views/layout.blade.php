@@ -3,8 +3,7 @@
 <head>
 	<title>@yield('title')</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 		body, html {
@@ -45,12 +44,16 @@
 </head>
 <body id="particles-js">
 
+@yield('anv_bar')
+
+
+<!--changed to yield
 <ul>
   <li><a href="/">Home</a></li>
   <li><a href="/about">About</a></li>
   <li><a href="/contact">Contact</a></li>
   @yield('options')
-</ul>
+</ul> -->
 
 
 @yield('content')
