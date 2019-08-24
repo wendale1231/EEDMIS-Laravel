@@ -3,7 +3,7 @@
 <head>
 	<title>@yield('title')</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 		body, html {

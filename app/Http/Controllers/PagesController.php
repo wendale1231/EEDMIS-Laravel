@@ -9,16 +9,9 @@ class PagesController extends Controller
     //
 
     public function home(){
-    	return view('welcome');
+    	return view('/login');
     }
 
-    public function about(){
-    	return view('about');
-    }
-
-    public function contact(){
-    	return view('about');
-    }
 
     public function check_login(Request $request){
 		$this->validate($request, [
@@ -32,7 +25,7 @@ class PagesController extends Controller
 		);
 
 		if(Auth::attempt($user_data)){
-			return view('/home');
+			return view('../home');
 		}
 		else{
 			return back()->with('error', 'Wrong Login Details');
@@ -46,7 +39,7 @@ class PagesController extends Controller
 
 	function logout(){
 		Auth::logout();
-		return redirect('main');
+		return redirect('logout');
 	}
 
 }

@@ -11,16 +11,27 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'HomeController@home');
 
-Route::get('/contact', function(){
-	return view('contact');
-});
+// Route::get('/contact', function(){
+// 	return view('contact');
+// });
 
-Route::get('/about', function(){
-	return view('about');
-});
+// Route::get('/about', function(){
+// 	return view('about');
+// });
 
-Route::get('/login', function(){
-	return view('login');
-});
+// Route::get('/login', function(){
+// 	return view('login');
+// });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
