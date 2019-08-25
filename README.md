@@ -35,7 +35,7 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 
 ***Minor Changelogs***<br>
 ------08.25.19------<br>
--Dashboard Redesign
+-Dashboard Redesign<br>
 -Splitting Departments<br>
 -Bug Fixes<br><br>
 
