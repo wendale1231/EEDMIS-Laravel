@@ -45,6 +45,11 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 
 
 ***Major Changelogs***<br>
+------08.25.19------<br>
+-Database Integration<br>
+-Databse Changes<br>
+-Database Seeds Added<br>
+
 ------08.24.19------<br>
 -Login System Added<br><br>
 
