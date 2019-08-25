@@ -25,9 +25,13 @@ class HomeController extends Controller
     {
         return view('/home');
     }
-
+/////////// Departments    ///////////////////////////
     public function ibjt(){
         return view('department.IBJT');
+    }
+
+    public function burial(){
+        return view('department.Burial');
     }
 
     public function admin(){

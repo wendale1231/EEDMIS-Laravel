@@ -15,9 +15,14 @@ Auth::routes();
 
 Route::get('/', 'HomeController@home');
 
+//Added For Registration
+Route::get('/home', 'HomeController@home');
+
 Route::get('/IBJT', 'HomeController@ibjt');
 
 Route::get('/admin', 'HomeController@admin');
+
+Route::get('/Burial', 'HomeController@burial');
 
 // Murag Useless ni siya so akong gi remove haha
 

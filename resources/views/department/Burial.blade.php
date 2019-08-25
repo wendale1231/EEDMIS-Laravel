@@ -88,8 +88,8 @@
               <div class="col-md-3">
                 <div class="box warning">
                   <i class="fa fa-shopping-cart"></i>
-                  <h3>5,154</h3>
-                  <p class="lead">Product sales</p>
+                  <h3>154</h3>
+                  <p class="lead">Burials This Year</p>
                 </div>
               </div>
               <div class="col-md-3">

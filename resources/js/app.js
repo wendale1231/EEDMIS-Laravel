@@ -77,4 +77,3 @@ function checkStuff() {
     msg.innerHTML = "";
   }
 }
-
