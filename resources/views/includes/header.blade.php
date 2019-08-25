@@ -10,7 +10,7 @@
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" style="background-color: #7f5feb">
             <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
             <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
             <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
