@@ -17,7 +17,7 @@
             <li role="separator" class="divider"></li>
             <form id="logout-form" method="POST" action="{{ route('logout') }}">
               @csrf
-              <li><button><i class="fa fa-sign-out"></i> Log out</button></li>
+              <li><center><button class="btn"><i class="fa fa-sign-out"></i> Log out</button></center></li>
             </form>
           </ul>
         </li>
