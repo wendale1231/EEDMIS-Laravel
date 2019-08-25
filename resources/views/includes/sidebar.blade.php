@@ -1,7 +1,7 @@
 <aside class="side-nav" id="show-side-navigation1">
       <i class="fa fa-bars close-aside hidden-sm hidden-md hidden-lg" data-close="show-side-navigation1"></i>
       <div class="heading">
-        <img src="https://www.w3schools.com/w3images/avatar5.png" alt="">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
         <div class="info">
           <h3><a href="/Burial">{{Auth::user()->name}}</a></h3>
           <p>Lorem ipsum dolor sit amet consectetur.</p>

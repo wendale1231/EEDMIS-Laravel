@@ -24,6 +24,8 @@ Route::get('/admin', 'HomeController@admin');
 
 Route::get('/Burial', 'HomeController@burial');
 
+Route::get('/PublicMarket', 'HomeController@market');
+
 // Murag Useless ni siya so akong gi remove haha
 
 

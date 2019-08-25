@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -37,4 +38,11 @@ class HomeController extends Controller
     public function admin(){
         return view('department.admin');
     }
+
+    public function market(){
+        $stalls = DB::table('stall_details')->get();
+        $applicant = DB::table('stall_applicant')->get();
+        return view('department.PublicMarket')->with('stalls',$stalls);
+    }
+
 }
