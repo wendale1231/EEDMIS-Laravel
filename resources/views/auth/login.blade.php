@@ -246,7 +246,7 @@ particlesJS("particles-js", {
 
 .box input[type = "text"],.box input[type = "password"] {
   display: block;
-  margin: 20px auto;
+  margin: 20px 0 20px 30px;
   background: #262e49;
   border: 0;
   border-radius: 5px;
