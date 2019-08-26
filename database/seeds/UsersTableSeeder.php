@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'username' => 'wendale1231',
             'password' => bcrypt('password'),
-            'dept' => 'PublicMarket'
+            'dept' => 'Admin'
         ]);
     }
 }

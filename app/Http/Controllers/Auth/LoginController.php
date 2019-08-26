@@ -32,7 +32,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         $redirect_routes = [
-            "PublicMarket" => "admin."
+            "Admin" => "admin."
         ];
 
         /*

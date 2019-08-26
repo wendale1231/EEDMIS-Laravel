@@ -20,8 +20,6 @@ Route::get('/home', 'HomeController@home');
 
 Route::get('/IBJT', 'HomeController@ibjt');
 
-Route::get('/admin', 'HomeController@admin');
-
 Route::get('/Burial', 'HomeController@burial');
 
 //ADMIN
@@ -37,7 +35,7 @@ Route::namespace('Web\Admin')->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
 
         //kaning middleware, mao ni mu check if naka login ba ang user
-        Route::middleware(['auth:web'])->group(function () {
+        Route::middleware(['auth:web', 'role:admin'])->group(function () {
 
             /*
              * Tricky ni. So read carefully.
