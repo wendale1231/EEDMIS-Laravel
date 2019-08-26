@@ -24,21 +24,6 @@ Route::get('/admin', 'HomeController@admin');
 
 Route::get('/Burial', 'HomeController@burial');
 
-// Murag Useless ni siya so akong gi remove haha
-
-
-// Route::get('/contact', function(){
-// 	return view('contact');
-// });
-
-// Route::get('/about', function(){
-// 	return view('about');
-// });
-
-// Route::get('/login', function(){
-// 	return view('login');
-// });
-
 //ADMIN
 
 /*
