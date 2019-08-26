@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Auth::routes();
 
 Route::get('/', 'HomeController@home');
@@ -24,7 +26,7 @@ Route::get('/admin', 'HomeController@admin');
 
 Route::get('/Burial', 'HomeController@burial');
 
-Route::get('/PublicMarket', 'HomeController@market');
+Route::get('/PublicMarket', 'UserController@market');
 
 // Murag Useless ni siya so akong gi remove haha
 

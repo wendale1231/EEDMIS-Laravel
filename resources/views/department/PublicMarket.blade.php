@@ -49,6 +49,10 @@
           </div>
         </div>
       </section>
+      <form method="get" action="/PublicMarket/id=1?">
+        <button type="submit">Update Stall</button>
+      </form>
+      
       <section class="charts">
         <div class="container-fluid">
           <div class="row">
