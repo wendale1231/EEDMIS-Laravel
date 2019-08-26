@@ -18,8 +18,8 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 -Open Command Promt(for Windows) or Terminal (for Linux and Mac)<br>
 -Enter this commands(in order and without quotes)<br>
 
-	`composer install`
-	`php artisan migrate --seed`
+	composer install
+	php artisan migrate --seed
 
 ***How to Connect to Database and Migrate***<br>
 
