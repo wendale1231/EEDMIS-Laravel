@@ -17,9 +17,9 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 -Open ".env" file and edit this line "DB_DATABASE=laravel" to "DB_DATABASE=eedmis_laravel"<br>
 -Open Command Promt(for Windows) or Terminal (for Linux and Mac)<br>
 -Enter this commands(in order and without quotes)<br>
-	-"composer install"<br>
-	-"php artisan migrate"<br>
-	-"php artisan db:seed"<br><br>
+
+	`composer install`
+	`php artisan migrate --seed`
 
 ***How to Connect to Database and Migrate***<br>
 
