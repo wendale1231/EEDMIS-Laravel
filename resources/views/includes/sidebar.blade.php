@@ -3,7 +3,7 @@
       <div class="heading">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
         <div class="info">
-          <h3><a href="/Burial">{{Auth::user()->name}}</a></h3>
+          <h3><a href="#">{{Auth::user()->name}}</a></h3>
           <p>Lorem ipsum dolor sit amet consectetur.</p>
         </div>
       </div>

@@ -34,6 +34,18 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 -Lets make this clean and responsive<br><br>
 
 ***Minor Changelogs***<br>
+
+------08.26.19------<br>
+-Tenant Registration Form Added!<br>
+[Refract] Login<br>
+-Bug Fixes<br><br>
+
+
+------08.27.19------<br>
+-Added Permissions(by Balisi)<br>
+[Refract] Admin Dashboard(by Balisi)<br><br>
+
+
 ------08.25.19------<br>
 -Dashboard Redesign<br>
 -Splitting Departments<br>
