@@ -35,7 +35,7 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 
 ***Minor Changelogs***<br>
 
-------08.26.19------<br>
+------08.28.19------<br>
 -Tenant Registration Form Added!<br>
 [Refract] Login<br>
 -Bug Fixes<br><br>
