@@ -11,14 +11,8 @@
         <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
       </div>
       <ul class="categories">
-        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a href="#">Dashboard</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
+        <li><i class="fa fa-home fa-fw"></i><a href="dashboard">Dashboard</a>
+              @include('department.' . Auth::user()->dept . '.sidebar_menu')
         </li>
 
       </ul>

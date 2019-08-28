@@ -71,3 +71,23 @@
 
 
 @endsection
+
+
+@section('links')
+
+
+  <script src="{{ asset('js/render-js.js') }}" defer></script>
+
+@endsection
+
+
+@section('script')
+
+
+    function load_main_content()
+    {
+        $('#contents').load('/register');
+    }
+
+
+  @endsection

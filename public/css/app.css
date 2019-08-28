@@ -144,7 +144,6 @@ body {height: 100%;background-color: #1d243d}
   margin-right: 5px
 }
 .side-nav .categories > li > a:after {
-  content: "\f053";
   font-family: fontAwesome;
   font-size: 11px;
   line-height: 1.8;
