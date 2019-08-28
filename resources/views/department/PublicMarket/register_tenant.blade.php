@@ -5,7 +5,8 @@
 
 <div class="cont" style="width: 100%;" style="background-color: #252636">
 
-    <form  class="well form-horizontal" action=" " style="margin: 0 auto" method="post"  id="contact_form">
+    <form  class="well form-horizontal" action="{{ route('register') }}" style="margin: 0 auto" method="post"  id="contact_form">
+      @csrf
 <fieldset>
 
 <legend>Tenant Registration</legend>
@@ -37,27 +38,17 @@
                         <div class="col-md-4">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="hosting" value="male" /> Male
+                                    <input type="radio" name="gender" value="male" /> Male
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="hosting" value="female" /> Female
+                                    <input type="radio" name="gender" value="female" /> Female
                                 </label>
                             </div>
                         </div>
                     </div>
 
-<!-- Change this if required -->
-<!--        <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-    </div>
-  </div>
-</div> -->
 
 <div class="form-group">
   <label class="col-md-4 control-label">Phone #</label>  
@@ -93,6 +84,17 @@
   </div>
 </div>
 </div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Stall Name</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-shopping-basket"></i></span>
+  <input name="stall_name" placeholder="Stall Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
    
 <div class="form-group"> 
   <label class="col-md-4 control-label">Stall Category</label>
@@ -126,7 +128,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        	<textarea class="form-control" name="comment" placeholder="Stall Description"></textarea>
+        	<textarea class="form-control" name="stall_description" placeholder="Stall Description"></textarea>
   </div>
   </div>
 </div>

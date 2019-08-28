@@ -22,9 +22,14 @@ class RolesPermissionsTableSeeder extends Seeder
         $permission = Permission::create(['name' => 'edit all']);
 
         $admin_role->givePermissionTo($permission);
+        $burial_role->givePermissionTo($permission);
+        $ibjt_role->givePermissionTo($permission);
+        $public_market_role->givePermissionTo($permission);
 
-        $user = User::first();
-        $user->assignRole($admin_role);
+        $admin_user = User::first();
+        $admin_user->assignRole($admin_role);
+        $market_user = User::find(2);
+        $market_user->assignRole($public_market_role);
 
     }
 }

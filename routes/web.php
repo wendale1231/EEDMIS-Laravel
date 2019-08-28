@@ -13,8 +13,11 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@home');
-
+Route::group(['middleware' => 'prevent-back-history'],function(){
+  Auth::routes();
+  Route::get('/logout', 'HomeController@home');
+  Route::get('/', "HomeController@home");
+});
 //ADMIN
 
 /*
@@ -53,7 +56,10 @@ Route::namespace('Web\PublicMarket')->group(function () {
         Route::middleware(['auth:web', 'role:public_market'])->group(function () {
             Route::resource('/dashboard', 'StallDashboardController');
             Route::resource('/register', 'RegisterTenantController');
+            Route::post('register','RegisterTenantController@store');
         });
     });
 });
+
+
 //ADMIN END
