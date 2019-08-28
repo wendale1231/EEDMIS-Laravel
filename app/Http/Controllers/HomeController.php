@@ -16,8 +16,9 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-    public function index(){
-    	return view('/login');
+    public function home(){
+        Auth::check();
+    	return view('.home');
     }
 
 }

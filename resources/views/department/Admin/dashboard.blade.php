@@ -71,3 +71,11 @@
 
 
 @endsection
+
+
+@section('links')
+
+
+  <script src="{{ asset('js/render-js.js') }}" defer></script>
+
+@endsection

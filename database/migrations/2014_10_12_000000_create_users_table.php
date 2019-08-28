@@ -34,6 +34,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('applicant_id');
             $table->string('name');
             $table->date('birthdate');
+            $table->timestamps();
         });
         Schema::dropIfExists('rental');
         Schema::create('rental', function (Blueprint $table){
