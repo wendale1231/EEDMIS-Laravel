@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Web\PublicMarket;
 use App\StallApplicant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use DB;
+
 
 class RegisterTenantController extends Controller
 {
@@ -16,22 +16,15 @@ class RegisterTenantController extends Controller
     }
 
 
-    public function store()
+    public function store(Request $request)
     {
-        
-        $user = DB::table('stall_applicant')->insert([
-            'name' => $data['first_name'] . " " . $data['last_name'],
-            'birthdate' => now(),
-            'phone_number' => $data['phone'],
-            'address' => $data['tenant_address'],
-            'market_address' => $data['market_address'],
-            'stall_name' => $data['stall_name'],
-            'stall_category' => $data['stall_category'],
-            'stall_id' => $data['stall_id'],
-            'stall_description' => $data['stall_description']
-        ]);
-        
-        
-        return view('department.PublicMarket.register_tenant');
+
+        $request->request->add(['birthdate' => date('Y-m-d H:i:s')]);
+        $request->request->add(['name' => ($request['first_name'] . " " . $request['last_name'])]);
+        $request->except(['first_name', 'last_name']);
+        $tenant = StallApplicant::create($request->all());
+        $message = 'Successfully added ' . $tenant->name;
+   
+        return redirect()->back()->with(compact('message'));
     }
 }

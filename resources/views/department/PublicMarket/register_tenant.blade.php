@@ -5,7 +5,7 @@
 
 <div class="cont" style="width: 100%;" style="background-color: #252636">
 
-    <form  class="well form-horizontal" action="{{ route('register') }}" style="margin: 0 auto" method="post"  id="contact_form">
+    <form  class="well form-horizontal" action="{{route('market.register.store')}}" style="margin: 0 auto" method="post"  id="contact_form">
       @csrf
 <fieldset>
 
@@ -34,20 +34,20 @@
 
 
  <div class="form-group">
-                        <label class="col-md-4 control-label">Gender</label>
-                        <div class="col-md-4">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="gender" value="male" /> Male
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="gender" value="female" /> Female
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+    <label class="col-md-4 control-label">Gender</label>
+      <div class="col-md-4">
+          <div class="radio">
+              <label>
+                  <input type="radio" name="gender" value="male" /> Male
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="gender" value="female" /> Female
+              </label>
+          </div>
+      </div>
+  </div>
 
 
 <div class="form-group">
@@ -55,7 +55,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="(09)99999999" class="form-control" type="text">
+  <input name="phone_number" placeholder="(09)99999999" class="form-control" type="number">
     </div>
   </div>
 </div>
@@ -65,7 +65,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="tenant_address" placeholder="Address" class="form-control" type="text">
+  <input name="address" placeholder="Address" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -132,7 +132,12 @@
   </div>
   </div>
 </div>
-<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Tenant Info Saved!</div>
+
+@if(session('message'))
+<div class="alert alert-success" role="alert"> Success<i class="glyphicon glyphicon-thumbs-up"></i> {{session('message')}}!</div>
+@endif
+
+
 
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
@@ -153,8 +158,8 @@
 
 @section('links')
 
-<link href="{{ asset('/css/register_tenant.css') }}" rel="stylesheet">
+<!-- <link href="{{ asset('/css/register_tenant.css') }}" rel="stylesheet"> -->
 
-<script src="{{ asset('js/register_tenant.js') }}" defer></script>
+<!-- <script src="{{ asset('js/register_tenant.js') }}" defer></script> -->
 
 @endsection
