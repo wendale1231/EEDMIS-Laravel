@@ -11,7 +11,7 @@
         <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
       </div>
       <ul class="categories">
-        <li><i class="fa fa-home fa-fw"></i><a href="dashboard">Dashboard</a>
+        <li><i class="fa fa-bar-chart fa-fw"></i><a href="dashboard">Dashboard</a>
               @include('department.' . Auth::user()->dept . '.sidebar_menu')
         </li>
 

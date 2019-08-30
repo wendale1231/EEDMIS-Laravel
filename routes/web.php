@@ -55,6 +55,7 @@ Route::namespace('Web\PublicMarket')->group(function () {
         Route::middleware(['auth:web', 'role:public_market'])->group(function () {
             Route::resource('/dashboard', 'StallDashboardController');
             Route::resource('/register', 'RegisterTenantController');
+            Route::resource('/manage', "StallsController");
         });
     });
 });

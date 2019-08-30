@@ -55,7 +55,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone_number" placeholder="(09)99999999" class="form-control" type="number">
+  <input name="phone_number" placeholder="(09)99999999" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -75,14 +75,14 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="market_address" class="form-control selectpicker" >
-      <option value=" ">Please select Market</option>
-      <option>Tambo Market</option>
-      <option>Wet Market</option>
-      <option>Pala-o Market(Unavailable)</option>
-    </select>
+      <select name="market_address" class="form-control selectpicker" >
+        <option value=" ">Please select Market</option>
+        <option value="Tambo Market">Tambo Market</option>
+        <option value="Wet Market">Wet Market</option>
+        <option value="Pala-o Market" disabled="true">Pala-o Market(Unavailable)</option>
+      </select>
+    </div>
   </div>
-</div>
 </div>
 
 
@@ -103,10 +103,10 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
     <select name="stall_category" class="form-control selectpicker" >
       <option value=" " >Please select Category</option>
-      <option>Green - Fruits, Vegetables, etc..</option>
-      <option>Red - Meats, Chicken, Pork, etc..</option>
-      <option>Blue - Seafood</option>
-      <option>Yellow - Misc, Store, etc..</option>
+      <option value="green">Green - Fruits, Vegetables, etc..</option>
+      <option value="red">Red - Meats, Chicken, Pork, etc..</option>
+      <option value="blue">Blue - Seafood</option>
+      <option value="yellow">Yellow - Misc, Store, etc..</option>
     </select>
   </div>
 </div>
@@ -134,7 +134,7 @@
 </div>
 
 @if(session('message'))
-<div class="alert alert-success" role="alert"> Success<i class="glyphicon glyphicon-thumbs-up"></i> {{session('message')}}!</div>
+  <div class="alert alert-success" role="alert"> Success<i class="glyphicon glyphicon-thumbs-up"></i> {{session('message')}}!</div>
 @endif
 
 
@@ -158,6 +158,9 @@
 
 @section('links')
 
+
+
+<!-- I ADD RANI KUNG MA FIX NA NAKO ANG BUG SA JS -->
 <!-- <link href="{{ asset('/css/register_tenant.css') }}" rel="stylesheet"> -->
 
 <!-- <script src="{{ asset('js/register_tenant.js') }}" defer></script> -->

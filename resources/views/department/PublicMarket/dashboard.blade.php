@@ -21,19 +21,19 @@ Auth::check()
           <div class="row">
             <div class="col-md-4">
               <div class="box">
-                <i class="fa fa-envelope fa-fw bg-primary"></i>
+                <i class="fa fa-building fa-fw bg-primary"></i>
                 <div class="info">
                   <h3>{{ $stalls_details->count() }}</h3> <span>Total Stalls</span>
-                  <p>Gikan na ni sa database</p>
+                  <p>Total of all Stalls</p>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="box">
-                <i class="fa fa-file fa-fw danger"></i>
+                <i class="fa fa-check-square-o fa-fw danger"></i>
                 <div class="info">
                   <h3>{{ $stalls_details->where('availability', 1)->count() }}  </h3> <span>Stalls Available</span>
-                  <p>Apil pud ni</p>
+                  <p>Available Stalls in total</p>
                 </div>
               </div>
             </div>
@@ -41,8 +41,8 @@ Auth::check()
               <div class="box">
                 <i class="fa fa-users fa-fw success"></i>
                 <div class="info">
-                  <h3>5,245</h3> <span>Registered</span>
-                  <p>Kani dummy pa</p>
+                  <h3>{{$applicants->count()}}</h3> <span>Registered</span>
+                  <p>Registered Tenants</p>
                 </div>
               </div>
             </div>
