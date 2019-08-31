@@ -3,7 +3,7 @@
 
 @section('content')
 
-
+{{$counter = count($stalls_details)}}
 
 
 <div class="cont">
@@ -36,6 +36,7 @@
     <span class="table-add glyphicon glyphicon-plus">ADD</span>
     <table class="table">
       <tr>
+      	<th>ID</th>
         <th>Stall Type</th>
         <th>Market</th>
         <th>Availability</th>
@@ -44,6 +45,7 @@
       </tr>
       @foreach($stalls_details as $stall)
       	<tr>
+      		<td>{{$stall->stall_id}}</td>
 	      	<td contenteditable="true">{{$stall->stall_type}}</td>
 	      	<td contenteditable="true">Dummy Market</td>
 	      	@if($stall->availability == 1)
@@ -63,6 +65,7 @@
 
       <!-- This is our clonable table line -->
       <tr class="hide">
+      	<td>{{$counter = $counter + 1}}
         <td contenteditable="true">Untitled</td>
         <td contenteditable="true">undefined</td>
         <td contenteditable="true">undefined</td>

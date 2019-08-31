@@ -12,27 +12,26 @@ class StallDetailsSeeder extends Seeder
     public function run()
     {
         $stall_details = [
-            ['stall_type' => 'vegetables' , 'availability' => true],
-            ['stall_type' => 'vegetables' , 'availability' => true],
-            ['stall_type' => 'vegetables' , 'availability' => true],
-            ['stall_type' => 'vegetables' , 'availability' => true],
-            ['stall_type' => 'vegetables' , 'availability' => true],
-            ['stall_type' => 'vegetables' , 'availability' => true],
-            ['stall_type' => 'vegetables' , 'availability' => true],
-            ['stall_type' => 'chicken' , 'availability' => true],
-            ['stall_type' => 'chicken' , 'availability' => true],
-            ['stall_type' => 'chicken' , 'availability' => true],
-            ['stall_type' => 'chicken' , 'availability' => true],
-            ['stall_type' => 'chicken' , 'availability' => true],
-            ['stall_type' => 'chicken' , 'availability' => true],
-            ['stall_type' => 'chicken' , 'availability' => true],
-            ['stall_type' => 'meat' , 'availability' => true],
-            ['stall_type' => 'meat' , 'availability' => true],
-            ['stall_type' => 'meat' , 'availability' => true],
-            ['stall_type' => 'meat' , 'availability' => true],
-            ['stall_type' => 'meat' , 'availability' => true],
-            ['stall_type' => 'meat' , 'availability' => true],
-            ['stall_type' => 'meat' , 'availability' => true]
+            ['stall_type' => 'green' , 'availability' => true],
+            ['stall_type' => 'green' , 'availability' => true],
+            ['stall_type' => 'green' , 'availability' => true],
+            ['stall_type' => 'green' , 'availability' => true],
+            ['stall_type' => 'green' , 'availability' => true],
+            ['stall_type' => 'green' , 'availability' => true],
+            ['stall_type' => 'red' , 'availability' => true],
+            ['stall_type' => 'red' , 'availability' => true],
+            ['stall_type' => 'red' , 'availability' => true],
+            ['stall_type' => 'red' , 'availability' => true],
+            ['stall_type' => 'red' , 'availability' => true],
+            ['stall_type' => 'red' , 'availability' => true],
+            ['stall_type' => 'red' , 'availability' => true],
+            ['stall_type' => 'blue' , 'availability' => true],
+            ['stall_type' => 'blue' , 'availability' => true],
+            ['stall_type' => 'blue' , 'availability' => true],
+            ['stall_type' => 'blue' , 'availability' => true],
+            ['stall_type' => 'blue' , 'availability' => true],
+            ['stall_type' => 'blue' , 'availability' => true],
+            ['stall_type' => 'blue' , 'availability' => true]
         ];
 
         DB::table('stall_details')->insert($stall_details);
