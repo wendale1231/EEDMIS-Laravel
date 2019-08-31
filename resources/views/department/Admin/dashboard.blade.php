@@ -9,7 +9,11 @@
           <div class="row">
             <div class="col-md-12">
               <div class="content">
+
                 <h2>Welcome to Dashboard</h2>
+                    @if (isset(Auth::user()->dept))
+                    {{Auth::user()->dept}}
+                    @endif
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
               </div>
             </div>

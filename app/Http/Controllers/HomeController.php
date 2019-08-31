@@ -18,8 +18,11 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
+
+
     public function home(){
         if(Auth::check()){
+            
             $redirect_routes = [
                 "Admin" => "admin.",
                 "PublicMarket" => "market.",

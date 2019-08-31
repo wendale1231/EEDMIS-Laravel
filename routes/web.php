@@ -64,6 +64,7 @@ Route::namespace('Web\Slaughterhouse')->group(function () {
     Route::prefix('slaughter')->name('slaughter.')->group(function () {
         Route::middleware(['auth:web', 'role:slaughterhouse'])->group(function () {
             Route::resource('/dashboard', 'RecordsDashboardController');
+
         });
     });
 });

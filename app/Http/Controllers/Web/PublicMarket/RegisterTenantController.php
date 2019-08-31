@@ -27,4 +27,9 @@ class RegisterTenantController extends Controller
    
         return redirect()->back()->with(compact('message'));
     }
+
+    public function create(Request $request){
+
+
+    }
 }

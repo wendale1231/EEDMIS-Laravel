@@ -11,6 +11,7 @@
             <strong>{{ $message }}</strong>
     </span>
     @enderror
+
     <form name="form1" class="box" method="post" action="">
         @csrf
       <h4>EEDMO<span>Management System</span></h4>

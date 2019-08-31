@@ -13,8 +13,7 @@ class StallDashboardController extends Controller
     {
         $stalls_details = StallDetail::get();
         $applicants = StallApplicant::get();
-        return view('department.PublicMarket.dashboard')
-            ->with(compact('stalls_details','applicants'));
+        return view('department.PublicMarket.dashboard')->with(compact('stalls_details','applicants'));
     }
     
 }

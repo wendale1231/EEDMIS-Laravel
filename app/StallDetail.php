@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class StallDetail extends Model
 {
+
+	const UPDATED_AT = null;
     protected $fillable = [
         'stall_type', 'availability',
     ];
