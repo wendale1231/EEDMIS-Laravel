@@ -66,7 +66,7 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'db4free.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'eedmis-laravel'),
+            'database' => env('DB_DATABASE', 'eedmis_laravel'),
             'username' => env('DB_USERNAME', 'eedmis'),
             'password' => env('DB_PASSWORD', 'eedmislaravel'),
             'unix_socket' => env('DB_SOCKET', ''),
