@@ -47,6 +47,7 @@ Route::namespace('Web\Admin')->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::middleware(['auth:web', 'role:admin'])->group(function () {
             Route::resource('/dashboard', 'AdminController');
+            // Route::resource('/register_users', 'RegisterController');
         });
     });
 });
