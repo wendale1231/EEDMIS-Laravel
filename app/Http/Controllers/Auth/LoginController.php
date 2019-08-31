@@ -34,7 +34,7 @@ class LoginController extends Controller
         $redirect_routes = [
             "Admin" => "admin.",
             "PublicMarket" => "market.",
-            "Slaughterhouse" => "slaughterhouse",
+            "Slaughterhouse" => "slaughter.",
             "IBJT" => "ibjt"
         ];
 
@@ -51,6 +51,7 @@ class LoginController extends Controller
          * Kani na route: return redirect()->route($redirect_routes[ $user['dept'] ] . 'dashboard');
          * kay mahimo syang <user_dept>.dashboard
          * */
+        
         return redirect()->route($redirect_routes[ $user['dept'] ] . 'dashboard.index');
     }
 

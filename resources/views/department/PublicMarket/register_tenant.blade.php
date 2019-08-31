@@ -3,7 +3,7 @@
 
 @section('content')
 
-<div class="cont" style="width: 100%;" style="background-color: #252636">
+<div class="cont" style="width: 100%; margin-top: 60px;" style="background-color: #252636">
 
     <form  class="well form-horizontal" action="{{route('market.register.store')}}" style="margin: 0 auto" method="post"  id="contact_form">
       @csrf

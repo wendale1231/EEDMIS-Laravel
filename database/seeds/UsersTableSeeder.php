@@ -22,6 +22,11 @@ class UsersTableSeeder extends Seeder
             'username' => 'market',
             'password' => bcrypt('password'),
             'dept' => 'PublicMarket'],
+            ['name' => "Slaughterhouse Admin",
+            'email' => 'slaughter@gmail.com',
+            'username' => 'slaughter',
+            'password' => bcrypt('password'),
+            'dept' => 'Slaughterhouse'],
         ]);
     }
 }

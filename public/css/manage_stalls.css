@@ -1,7 +1,7 @@
 @import "compass/css3";
 
 .cont{
-  margin: 0 auto;
+  margin-top: 60px;
   padding: 2%;
   background-color: #f5f5f5;
   border-radius: 4px;

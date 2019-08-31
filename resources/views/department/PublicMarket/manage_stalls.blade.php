@@ -3,8 +3,6 @@
 
 @section('content')
 
-{{$counter = count($stalls_details)}}
-
 
 <div class="cont">
   <legend>Manage Stalls</legend>
@@ -54,7 +52,7 @@
 	      		<td>Occupied</td>
 	      	@endif
   	        <td>
-        	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        	<button type="button" class="btn" data-toggle="modal" data-target="#deleteModal">
 		  		<span class="table-remove glyphicon glyphicon-remove"></span>
 			</button>
 	          
@@ -68,7 +66,7 @@
 
       <!-- This is our clonable table line -->
       <tr class="hide">
-      	<td>{{$counter = $counter + 1}}
+      	<td>{{count($stalls_details)}}
         <td contenteditable="true">Untitled</td>
         <td contenteditable="true">undefined</td>
         <td contenteditable="true">undefined</td>
@@ -90,14 +88,11 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         Are you sure you want to delete this?
