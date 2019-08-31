@@ -29,7 +29,7 @@ class HomeController extends Controller
             return redirect()->route($redirect_routes[Auth::user()->dept] . 'dashboard.index');
         }
         else{
-            return view('.home');
+            echo "AN ERROR HAS OCCURED! PLEASE USE INCOGNITO BROWSER";
         }
     }
 
