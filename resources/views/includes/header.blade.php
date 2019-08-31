@@ -15,16 +15,35 @@
             <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
             <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
             <li role="separator" class="divider"></li>
-            <form id="logout-form" method="POST" action="{{ route('logout') }}">
-              @csrf
-              <li><center><button class="btn"><i class="fa fa-sign-out"></i> Log out</button></center></li>
-            </form>
+            <center><button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-sign-out"></i>Logout</button>
+            </center>
           </ul>
         </li>
-        <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
-        <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
+        <!-- pag naa na ni pulos i balik ra ni nako haha -->
+<!--         <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
+        <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li> -->
         <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+      </div>
+      <div class="modal-body">
+        Are you sure to logout?
+      </div>
+      <form class="modal-footer" method="POST" action="{{ route('logout') }}">
+      @csrf
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary"><i class="fa fa-sign-out"></i> Log out</button>
+      </form>
+    </div>
+  </div>
+</div>
