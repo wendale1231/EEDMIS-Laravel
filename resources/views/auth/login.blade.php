@@ -5,17 +5,18 @@
 
 <div class="animated bounceInDown">
   <div class="container">
-    <span class="error animated tada" id="msg"></span>
+    
+    @error('email')
+    <span class="error animated tada" style="display: block;" id="msg">
+            <strong>{{ $message }}</strong>
+    </span>
+    @enderror
     <form name="form1" class="box" method="post" action="">
         @csrf
       <h4>EEDMO<span>Management System</span></h4>
       <h5>Login to your account.</h5>
+
         <input type="text" name="email" placeholder="Email" autocomplete="off">
-        @error('email')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-        @enderror
         <i class="typcn typcn-eye" id="eye"></i>
         <input type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off">
         <label>
@@ -27,6 +28,7 @@
         @if (Route::has('password.request'))
             <a href="{{ route('password.request') }}" class="forgetpass">Forget Password?</a>
         @endif
+        <!-- <button class="btn1" onclick="checkStuff()">Sign in</button> -->
         <input type="submit" value="Sign in" class="btn1">
       </form>
 
