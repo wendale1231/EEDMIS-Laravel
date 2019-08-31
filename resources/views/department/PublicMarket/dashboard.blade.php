@@ -3,7 +3,6 @@
 
 @section('content')
 
-Auth::check()
       <div class="welcome">
         <div class="container-fluid">
           <div class="row">

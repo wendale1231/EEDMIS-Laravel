@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 
@@ -17,7 +19,18 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
     public function home(){
-    	return view('.home');
+        if(Auth::check()){
+            $redirect_routes = [
+                "Admin" => "admin.",
+                "PublicMarket" => "market.",
+                "Slaughterhouse" => "slaughter.",
+                "IBJT" => "ibjt"
+            ];
+            return redirect()->route($redirect_routes[Auth::user()->dept] . 'dashboard.index');
+        }
+        else{
+            return view('.home');
+        }
     }
 
 }
