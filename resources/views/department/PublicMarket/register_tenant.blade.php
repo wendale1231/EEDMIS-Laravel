@@ -101,13 +101,13 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-    <select name="stall_category" class="form-control selectpicker" >
-      <option value=" " >Please select Category</option>
-      <option value="green">Green - Fruits, Vegetables, etc..</option>
-      <option value="red">Red - Meats, Chicken, Pork, etc..</option>
-      <option value="blue">Blue - Seafood</option>
-      <option value="yellow">Yellow - Misc, Store, etc..</option>
-    </select>
+        <select name="stall_category" class="form-control selectpicker" >
+          <option disabled selected value=" " >Please select Category</option>
+          <option value="green">Green - Fruits, Vegetables, etc..</option>
+          <option value="red">Red - Meats, Chicken, Pork, etc..</option>
+          <option value="blue">Blue - Seafood</option>
+          <option value="yellow">Yellow - Misc, Store, etc..</option>
+        </select>
   </div>
 </div>
 </div>
@@ -116,8 +116,12 @@
   <label class="col-md-4 control-label">Stall ID</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="stall_id" placeholder="Stall ID" class="form-control"  type="text">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>    <select name="stall_id" class="form-control selectpicker" >
+          <option selected value="" disabled>Please select Category</option>
+          @foreach($stalls as $stall)
+            <option value="{{$stall->stall_code}}" >{{$stall->stall_code}}</option>
+          @endforeach
+        </select>
     </div>
 </div>
 </div>

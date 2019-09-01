@@ -20,7 +20,7 @@ class StallsController extends Controller
     public function create()
     {
         StallDetail::insert(
-    		['stall_type' => 'Undefined', 'availability' => 1]
+    		['stall_type' => 'Undefined', 'availability' => 1, 'stall_code' => 'm10']
 		);
 		$message = 'Successfully Added!';
    

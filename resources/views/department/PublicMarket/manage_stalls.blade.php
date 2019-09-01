@@ -47,7 +47,14 @@
         <tr>
           <form action="{{ route('market.manage.edit',$stall->stall_id)}}" method="get">
             <td>{{$stall->stall_id}}</td>
-            <td><input type="text" name="stall_type" value="{{$stall->stall_type}}"></td>
+            <td>
+              <select name="stall_type" class="form-control selectpicker" >
+                <option value=" " >Please select Category</option>
+                <option @if($stall->stall_type == 'green') selected @endif value="green">Green - Fruits, Vegetables, etc..</option>
+                <option @if($stall->stall_type == 'red') selected @endif value="red">Red - Meats, Chicken, Pork, etc..</option>
+                <option @if($stall->stall_type == 'blue') selected @endif value="blue">Blue - Seafood</option>
+                <option @if($stall->stall_type == 'yellow') selected @endif value="yellow">Yellow - Misc, Store, etc..</option>
+              </select>
             <td>Dummy Market</td>
             @if($stall->availability)
               <td>Available</td>

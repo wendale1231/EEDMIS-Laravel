@@ -54,6 +54,7 @@ class CreateUsersTable extends Migration
         Schema::create('stall_details', function (Blueprint $table){
             $table->bigIncrements('stall_id');
             $table->string('stall_type');
+            $table->string('stall_code');
             $table->boolean('availability');
         });
 
