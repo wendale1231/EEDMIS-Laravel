@@ -12,26 +12,26 @@ class StallDetailsSeeder extends Seeder
     public function run()
     {
         $stall_details = [
-            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v1'],
-            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v2'],
-            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v3'],
-            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v4'],
-            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v5'],
-            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v6'],
-            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm1'],
-            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm2'],
-            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm3'],
-            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm4'],
-            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm5'],
-            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm6'],
-            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm7'],
-            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f1'],
-            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f2'],
-            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f3'],
-            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f4'],
-            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f5'],
-            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f6'],
-            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f7']
+            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v1', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v2', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v3', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v4', 'market_address' => 'Pala-o Market'],
+            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v5', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'green' , 'availability' => true, 'stall_code' => 'v6', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm1', 'market_address' => 'Pala-o Market'],
+            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm2', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm3', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm4', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm5', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm6', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'red' , 'availability' => true, 'stall_code' => 'm7', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f1', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f2', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f3', 'market_address' => 'Wet Market'],
+            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f4', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f5', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f6', 'market_address' => 'Tambo Market'],
+            ['stall_type' => 'blue' , 'availability' => true, 'stall_code' => 'f7', 'market_address' => 'Tambo Market']
         ];
 
         DB::table('stall_details')->insert($stall_details);

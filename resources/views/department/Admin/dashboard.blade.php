@@ -27,7 +27,7 @@
               <div class="box">
                 <i class="fa fa-envelope fa-fw bg-primary"></i>
                 <div class="info">
-                  <h3>69</h3> <span>Total Stalls</span>
+                  <h3>{{$stall_count->count()}}</h3> <span>Total Stalls</span>
                   <p>Dummy</p>
                 </div>
               </div>
@@ -36,7 +36,7 @@
               <div class="box">
                 <i class="fa fa-file fa-fw danger"></i>
                 <div class="info">
-                  <h3>69</h3> <span>Stalls Available</span>
+                  <h3>{{$stall_avail->count()}}</h3> <span>Stalls Available</span>
                   <p>Dummy</p>
                 </div>
               </div>
@@ -45,7 +45,7 @@
               <div class="box">
                 <i class="fa fa-users fa-fw success"></i>
                 <div class="info">
-                  <h3>5,245</h3> <span>Registered</span>
+                  <h3>{{$stall_applicant->count()}}</h3> <span>Registered</span>
                   <p>Dummy</p>
                 </div>
               </div>

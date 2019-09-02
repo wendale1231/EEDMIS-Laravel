@@ -12,6 +12,9 @@ class AdminController extends Controller
 	
     public function index()
     {
-        return view('department.Admin.dashboard');
+    	$stall_count = StallDetail::get();
+    	$stall_avail = StallDetail::where('availability', 1);
+    	$stall_applicant = StallApplicant::get();
+        return view('department.Admin.dashboard')->with(compact('stall_count','stall_avail','stall_applicant'));
     }
 }

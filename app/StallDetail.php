@@ -9,7 +9,7 @@ class StallDetail extends Model
 
 	const UPDATED_AT = null;
     protected $fillable = [
-        'stall_type', 'availability',
+        'stall_type', 'availability', 'stall_code', 'market_address'
     ];
 
     protected $table = 'stall_details';

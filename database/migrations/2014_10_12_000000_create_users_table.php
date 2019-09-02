@@ -41,7 +41,7 @@ class CreateUsersTable extends Migration
             $table->string('stall_name');
             $table->string('stall_category');
             $table->string('stall_id');
-            $table->string('stall_descripion');
+            $table->string('stall_description');
             $table->timestamps();
         });
         Schema::dropIfExists('rental');
@@ -55,6 +55,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('stall_id');
             $table->string('stall_type');
             $table->string('stall_code');
+            $table->string('market_address');
             $table->boolean('availability');
         });
 

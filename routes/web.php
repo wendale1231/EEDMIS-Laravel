@@ -57,6 +57,7 @@ Route::namespace('Web\PublicMarket')->group(function () {
             Route::resource('/dashboard', 'StallDashboardController');
             Route::resource('/register', 'RegisterTenantController');
             Route::resource('/manage', "StallsController");
+            Route::resource('/stall-details', "StallDetailController");
         });
     });
 });
