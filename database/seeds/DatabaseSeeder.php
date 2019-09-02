@@ -11,37 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => "Wendale Dy",
-            'email' => 'admin@gmail.com',
-            'username' => 'wendale1231',
-            'password' => bcrypt('password'),
-            'dept' => 'PublicMarket'
+        $this->call([
+            UsersTableSeeder::class,
+            StallDetailsSeeder::class,
+            RolesPermissionsTableSeeder::class,
         ]);
-        $stall_details = [
-        	['stall_type' => 'vegetables' , 'availability' => true],
-        	['stall_type' => 'vegetables' , 'availability' => true],
-        	['stall_type' => 'vegetables' , 'availability' => true],
-        	['stall_type' => 'vegetables' , 'availability' => true],
-        	['stall_type' => 'vegetables' , 'availability' => true],
-        	['stall_type' => 'vegetables' , 'availability' => true],
-        	['stall_type' => 'vegetables' , 'availability' => true],
-        	['stall_type' => 'chicken' , 'availability' => true],        	
-        	['stall_type' => 'chicken' , 'availability' => true],
-        	['stall_type' => 'chicken' , 'availability' => true],
-        	['stall_type' => 'chicken' , 'availability' => true],
-        	['stall_type' => 'chicken' , 'availability' => true],
-        	['stall_type' => 'chicken' , 'availability' => true],
-        	['stall_type' => 'chicken' , 'availability' => true],
-        	['stall_type' => 'meat' , 'availability' => true],
-        	['stall_type' => 'meat' , 'availability' => true],
-        	['stall_type' => 'meat' , 'availability' => true],
-        	['stall_type' => 'meat' , 'availability' => true],
-        	['stall_type' => 'meat' , 'availability' => true],
-        	['stall_type' => 'meat' , 'availability' => true],
-        	['stall_type' => 'meat' , 'availability' => true]
-        ];
-
-        DB::table('stall_details')->insert($stall_details);
     }
 }

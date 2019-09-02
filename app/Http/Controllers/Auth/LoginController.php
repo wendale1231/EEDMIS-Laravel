@@ -31,7 +31,28 @@ class LoginController extends Controller
     // echo {{Auth::user()->dept}};
     protected function authenticated(Request $request, $user)
     {
-        return redirect("/" . $user['dept']);
+        $redirect_routes = [
+            "Admin" => "admin.",
+            "PublicMarket" => "market.",
+            "Slaughterhouse" => "slaughter.",
+            "IBJT" => "ibjt"
+        ];
+
+        /*
+         * ikaw na bahala adjust ani.
+         * basta ang pag login i redirect nato thru route names.
+         * For example, ang admin man gud tanan route names kay naay prefix na "admin"
+         * E.g admin.dashboard.index, admin.dashboard.get
+         *
+         * So, sunod mag himo kag routes para sa guest users
+         * imong buhaton i prefix nimo ang route name ug "guest"
+         * E.g guest.dashboard.index
+         *
+         * Kani na route: return redirect()->route($redirect_routes[ $user['dept'] ] . 'dashboard');
+         * kay mahimo syang <user_dept>.dashboard
+         * */
+        
+        return redirect()->route($redirect_routes[ $user['dept'] ] . 'dashboard.index');
     }
 
     /**

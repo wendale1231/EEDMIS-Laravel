@@ -34,6 +34,15 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('applicant_id');
             $table->string('name');
             $table->date('birthdate');
+            $table->string('gender');
+            $table->integer('phone_number');
+            $table->string('address');
+            $table->string('market_address');
+            $table->string('stall_name');
+            $table->string('stall_category');
+            $table->string('stall_id');
+            $table->string('stall_descripion');
+            $table->timestamps();
         });
         Schema::dropIfExists('rental');
         Schema::create('rental', function (Blueprint $table){
@@ -45,6 +54,7 @@ class CreateUsersTable extends Migration
         Schema::create('stall_details', function (Blueprint $table){
             $table->bigIncrements('stall_id');
             $table->string('stall_type');
+            $table->string('stall_code');
             $table->boolean('availability');
         });
 

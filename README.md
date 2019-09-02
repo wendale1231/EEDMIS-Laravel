@@ -17,9 +17,9 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 -Open ".env" file and edit this line "DB_DATABASE=laravel" to "DB_DATABASE=eedmis_laravel"<br>
 -Open Command Promt(for Windows) or Terminal (for Linux and Mac)<br>
 -Enter this commands(in order and without quotes)<br>
-	-"composer install"<br>
-	-"php artisan migrate"<br>
-	-"php artisan db:seed"<br><br>
+
+	composer install
+	php artisan migrate --seed
 
 ***How to Connect to Database and Migrate***<br>
 
@@ -34,6 +34,18 @@ Visit this <a href="https://laravel.com/docs/5.8/installation">site!.</a>
 -Lets make this clean and responsive<br><br>
 
 ***Minor Changelogs***<br>
+
+------08.28.19------<br>
+-Tenant Registration Form Added!<br>
+-[Refract] Login<br>
+-Bug Fixes<br><br>
+
+
+------08.27.19------<br>
+-Added Permissions(by Balisi)<br>
+[Refract] Admin Dashboard(by Balisi)<br><br>
+
+
 ------08.25.19------<br>
 -Dashboard Redesign<br>
 -Splitting Departments<br>
