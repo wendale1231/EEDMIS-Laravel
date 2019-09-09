@@ -1,4 +1,4 @@
-  
+
   function get(){    
     var table = document.getElementById('datas');
     var category = document.getElementById('stall_category');
@@ -31,3 +31,10 @@
       }
     }
   }
+
+          var options = {
+            currentPage: 3,
+            totalPages: 10
+        }
+
+        $('#datas').bootstrapPaginator(options);

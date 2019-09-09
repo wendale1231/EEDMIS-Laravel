@@ -13,6 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+
+        //// Change this if details are incomplete /////
+
+
+
+        ////////////////////// FOR USERS or the EEDMO Staffs /////////////////////////////
         Schema::dropIfExists('users');
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -25,7 +31,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-        //// Change this if details are incomplete /////
+        
 
 
         ////////////////////// FOR MARKET /////////////////////////////
@@ -57,6 +63,24 @@ class CreateUsersTable extends Migration
             $table->string('stall_code');
             $table->string('market_address');
             $table->boolean('availability');
+        });
+        ////////////////////// FOR MARKET /////////////////////////////
+
+        Schema::dropIfExists('slaughterhouse_transaction');
+        Schema::create('slaughterhouse_transaction', function (Blueprint $table){
+            $table->bigIncrements('transaction_id');
+            $table->string('client_name');
+            $table->string('client_address');
+            $table->string('species');
+            $table->bigInteger('unit');
+            $table->bigInteger('client_number');            
+        });
+
+        Schema::dropIfExists('slaughterhouse_prices');
+        Schema::create('slaughterhouse_prices', function (Blueprint $table){
+            $table->bigIncrements('price_id');
+            $table->string('species');
+            $table->bigInteger('price');
         });
 
     }

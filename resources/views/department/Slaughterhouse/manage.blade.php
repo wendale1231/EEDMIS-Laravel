@@ -1,7 +1,9 @@
+
 @extends('layouts.app')
 
 
 @section('content')
+
 
 <div class="cont">
   <legend>Manage Stalls</legend>
@@ -33,7 +35,7 @@
       </div>
     </div>
   </div>
-    <a href="{{ route('market.manage.create')}}"><span class="table-add glyphicon glyphicon-plus">ADD</span></a>
+    <a href="{{ route('slaughter.manage.create')}}"><span class="table-add glyphicon glyphicon-plus">ADD</span></a>
     <table class="table" id="datas">
       <tr>
         <th>ID</th>
@@ -90,16 +92,16 @@
   </div>
 </div>
 
+
 @endsection
 
 
 @section('links')
 
 
-
-<!-- I ADD RANI KUNG MA FIX NA NAKO ANG BUG SA JS -->
-<link href="{{ asset('/css/manage_stalls.css') }}" rel="stylesheet">
-<script src="{{ asset('js/bootstrap-paginator.js') }}" defer></script>
-<script src="{{ asset('js/manage_stalls.js') }}" defer></script>
+  <script src="{{ asset('js/render-js.js') }}" defer></script>
 
 @endsection
+
+
+
