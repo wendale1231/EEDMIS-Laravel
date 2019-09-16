@@ -26,7 +26,8 @@ class RegisterTenantController extends Controller
         $request->except(['first_name', 'last_name']);
         $tenant = StallApplicant::create($request->all());
         $message = 'Successfully added ' . $tenant->name;
-        StallDetail::where('stall_code', $request->stall_id)->update(['availability'=> 0]);
+        $tenant_id = StallApplicant::where('stall_id', $request->stall_id)->first();
+        StallDetail::where('stall_code', $request->stall_id)->update(['availability'=> 0, 'tenant_id' => $tenant_id->applicant_id]);
         return redirect()->back()->with(compact('message'));
     }
 

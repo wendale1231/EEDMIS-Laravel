@@ -2,6 +2,7 @@
 <html>
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <head>
+	@yield('links')
     @include('includes.head')
 </head>
 <body translate="no">

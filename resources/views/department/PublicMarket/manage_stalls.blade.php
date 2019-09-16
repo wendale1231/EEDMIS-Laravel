@@ -33,7 +33,10 @@
       </div>
     </div>
   </div>
-    <a href="{{ route('market.manage.create')}}"><span class="table-add glyphicon glyphicon-plus">ADD</span></a>
+    <div class="text-center">
+      <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Add</a>
+    </div>
+    <!-- <a href="{{ route('market.manage.create')}}"><span class="table-add glyphicon glyphicon-plus">ADD</span></a> -->
     <table class="table" id="datas">
       <tr>
         <th>ID</th>
@@ -57,6 +60,7 @@
                 <option @if($stall->stall_type == 'blue') selected @endif value="blue">Blue - Seafood</option>
                 <option @if($stall->stall_type == 'yellow') selected @endif value="yellow">Yellow - Misc, Store, etc..</option>
               </select>
+            </td>
             <td id="{{$stall->market_address}}">
               <select name="market_address" class="form-control selectpicker" >
                 <option value="">Please select Market</option>
@@ -89,6 +93,46 @@
 
   </div>
 </div>
+<form action="{{ route('market.manage.create')}}" method="get">
+  @csrf
+  <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Add Stall</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          
+          <select name="stall_type" class="form-control selectpicker">
+            <option value=" " >Please select Category</option>
+            <option value="green">Green - Fruits, Vegetables, etc..</option>
+            <option value="red">Red - Meats, Chicken, Pork, etc..</option>
+            <option value="blue">Blue - Seafood</option>
+            <option value="yellow">Yellow - Misc, Store, etc..</option>
+          </select>
+          <p>Select Stall Categoty</p>
+          <select name="market_address" class="form-control selectpicker" >
+            <option value="" selected disabled>Please select Market</option>
+            <option value="Tambo Market">Tambo Market</option>
+            <option value="Wet Market">Wet Market</option>
+            <option value="Pala-o Market" disabled="true">Pala-o Market(Unavailable)</option>
+          </select>
+          <p>Select Stall Location</p>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-deep-orange" value="{{ csrf_token() }}" name="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
 
 @endsection
 

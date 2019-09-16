@@ -69,13 +69,25 @@
     </div>
   </div>
 </div>
- 
+
+
+ <div class="form-group">
+  <label class="col-md-4 control-label">Stall Name</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-shopping-basket"></i></span>
+  <input name="stall_name" placeholder="Stall Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
 <div class="form-group"> 
   <label class="col-md-4 control-label">Market Address</label>
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-      <select name="market_address" class="form-control selectpicker" >
+      <select id="market" name="market_address" class="form-control selectpicker" >
         <option value=" ">Please select Market</option>
         <option value="Tambo Market">Tambo Market</option>
         <option value="Wet Market">Wet Market</option>
@@ -85,23 +97,13 @@
   </div>
 </div>
 
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Stall Name</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-shopping-basket"></i></span>
-  <input name="stall_name" placeholder="Stall Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
    
-<div class="form-group"> 
+<div class="form-group" style="display: none;" id="stall_category"> 
   <label class="col-md-4 control-label">Stall Category</label>
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-        <select name="stall_category" class="form-control selectpicker" >
+        <select id="category" name="stall_category" class="form-control selectpicker" >
           <option disabled selected value=" " >Please select Category</option>
           <option value="green">Green - Fruits, Vegetables, etc..</option>
           <option value="red">Red - Meats, Chicken, Pork, etc..</option>
@@ -112,14 +114,15 @@
 </div>
 </div>
 
-<div class="form-group">
+<div class="form-group" style="display: none" id="stall_code">
   <label class="col-md-4 control-label">Stall ID</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>    <select name="stall_id" class="form-control selectpicker" >
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+        <select name="stall_id" class="form-control selectpicker" >
           <option selected value="" disabled>Please select Category</option>
           @foreach($stalls as $stall)
-            <option value="{{$stall->stall_code}}" >{{$stall->stall_code}}</option>
+              <option value="{{$stall->stall_code}}" >{{$stall->stall_code}}</option>
           @endforeach
         </select>
     </div>
@@ -156,6 +159,19 @@
 </div>
 
 
+<script>
+$('#market').change(function () {
+  var id = $(this).find(':selected')[0].value;
+  $('#stall_category').css('display', 'block');
+
+});
+
+$('#category').change(function(){
+  var id = $(this).find(':selected')[0].value;
+  $('#stall_category').css('display', 'block');
+});
+
+</script>
 
 @endsection
 

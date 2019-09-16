@@ -17,10 +17,24 @@ class StallsController extends Controller
 	}
 
 
-    public function create()
+    public function create(Request $request)
     {
+        return "hello";
+        $generate_code;
+        if($request->stall_type == 'red'){
+            $generate_code = "m" . StallDetail::where('stall_type', $request->stall_type)->count();
+        }
+        else if($request->stall_type == 'blue'){
+            $generate_code = "f" . StallDetail::where('stall_type', $request->stall_type)->count();
+        }
+        else if($request->stall_type == 'green'){
+            $generate_code = "v" . StallDetail::where('stall_type', $request->stall_type)->count();
+        }
+        else if($request->stall_type == 'yellow'){
+            $generate_code = "mis" . StallDetail::where('stall_type', $request->stall_type)->count();
+        }
         StallDetail::insert(
-	['stall_type' => 'Undefined', 'availability' => 1, 'stall_code' => 'undefined', 'market_address' => 'undefined']
+	       ['stall_type' => $request->stall_type, 'availability' => 1, 'stall_code' => $generate_code, 'market_address' => $request->market_address]
 		);
 		$message = 'Successfully Added!';
    
@@ -44,23 +58,10 @@ class StallsController extends Controller
     {
     	// return $request;
     	// return $request->stall_type;
-    	$generate_code;
-    	if($request->stall_type == 'red'){
-    		$generate_code = "m" . StallDetail::where('stall_type', $request->stall_type)->count();
-    	}
-    	else if($request->stall_type == 'blue'){
-    		$generate_code = "f" . StallDetail::where('stall_type', $request->stall_type)->count();
-    	}
-    	else if($request->stall_type == 'green'){
-    		$generate_code = "v" . StallDetail::where('stall_type', $request->stall_type)->count();
-    	}
-    	else if($request->stall_type == 'yellow'){
-    		$generate_code = "mis" . StallDetail::where('stall_type', $request->stall_type)->count();
-    	}
 
     	StallDetail::where('stall_id', $id)
     	->update(['stall_type' => $request->stall_type,
-    		'stall_code' => $generate_code, 'market_address' => $request->market_address]);
+    		'market_address' => $request->market_address]);
 		$message = 'Successfully Updated!';
    
         return redirect()->back()->with(compact('message'));

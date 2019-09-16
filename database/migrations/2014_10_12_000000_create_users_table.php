@@ -62,6 +62,7 @@ class CreateUsersTable extends Migration
             $table->string('stall_type');
             $table->string('stall_code');
             $table->string('market_address');
+            $table->string('tenant_id');
             $table->boolean('availability');
         });
         ////////////////////// FOR MARKET /////////////////////////////
