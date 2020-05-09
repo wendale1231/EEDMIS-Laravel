@@ -2,8 +2,8 @@
 
 
 @section('content')
-    
-      
+
+
       <div class="welcome">
         <div class="container-fluid">
           <div class="row">
@@ -23,8 +23,8 @@
               <div class="box">
                 <i class="fa fa-envelope fa-fw bg-primary"></i>
                 <div class="info">
-                  <h3>{{count($stalls)}}</h3> <span>Total Stalls</span>
-                  <p>Gikan na ni sa database</p>
+                  <h3>69</h3> <span>Total Stalls</span>
+                  <p>Dummy</p>
                 </div>
               </div>
             </div>
@@ -32,8 +32,8 @@
               <div class="box">
                 <i class="fa fa-file fa-fw danger"></i>
                 <div class="info">
-                  <h3>{{count($stalls)}}  </h3> <span>Stalls Available</span>
-                  <p>Apil pud ni</p>
+                  <h3>69</h3> <span>Stalls Available</span>
+                  <p>Dummy</p>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@
                 <i class="fa fa-users fa-fw success"></i>
                 <div class="info">
                   <h3>5,245</h3> <span>Registered</span>
-                  <p>Kani dummy pa</p>
+                  <p>Dummy</p>
                 </div>
               </div>
             </div>
@@ -69,5 +69,13 @@
       </section>
 
 
+
+@endsection
+
+
+@section('links')
+
+
+  <script src="{{ asset('js/render-js.js') }}" defer></script>
 
 @endsection

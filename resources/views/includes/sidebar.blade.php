@@ -3,7 +3,7 @@
       <div class="heading">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
         <div class="info">
-          <h3><a href="/Burial">{{Auth::user()->name}}</a></h3>
+          <h3><a href="#">{{Auth::user()->name}}</a></h3>
           <p>Lorem ipsum dolor sit amet consectetur.</p>
         </div>
       </div>
@@ -11,14 +11,8 @@
         <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
       </div>
       <ul class="categories">
-        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a href="#">Dashboard</a>
-          <ul class="side-nav-dropdown">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">ipsum dolor</a></li>
-            <li><a href="#">dolor ipsum</a></li>
-            <li><a href="#">amet consectetur</a></li>
-            <li><a href="#">ipsum dolor sit</a></li>
-          </ul>
+        <li><i class="fa fa-bar-chart fa-fw"></i><a href="dashboard">Dashboard</a>
+              @include('department.' . Auth::user()->dept . '.sidebar_menu')
         </li>
 
       </ul>
